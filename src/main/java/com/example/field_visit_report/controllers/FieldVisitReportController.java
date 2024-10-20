@@ -25,5 +25,10 @@ public class FieldVisitReportController {
         return ResponseEntity.status(201).body(report);
     }
 
-
+    // New GET method to retrieve all field visit reports
+    @GetMapping
+    public ResponseEntity<List<FieldVisitReport>> getAllFieldVisitReports() {
+        List<FieldVisitReport> reports = service.getAllFieldVisitReports();
+        return ResponseEntity.ok(reports);
+    }
 }

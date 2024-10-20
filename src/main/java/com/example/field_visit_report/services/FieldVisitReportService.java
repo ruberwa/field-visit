@@ -29,5 +29,7 @@ public class FieldVisitReportService {
         return repository.save(report);
     }
 
-
+    public List<FieldVisitReport> getAllFieldVisitReports() {
+        return repository.findAll(); // This will fetch all reports from the database
+    }
 }
